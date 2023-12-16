@@ -6,7 +6,13 @@ import router from './routes/route.js';
 
 const app=express(); //express server created
 const port=8000;
-app.use(cors());
+app.use(cors(
+    {
+        origin: ["http://localhost:3000/"],
+        methods: ["POST","GET","DELETE"],
+        credentials: true
+    }
+));
 app.use(bodyParser.json({extended: true}));
 app.use(bodyParser.urlencoded({extended: true}));
 
