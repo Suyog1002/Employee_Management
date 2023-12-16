@@ -24,7 +24,7 @@ const AddUser = () => {
   //function for adding employee
   const addEmployee=async(employee)=>{
     try{
-      await axios.post('http://localhost:8000/add',employee); //promise for add api
+      await axios.post('https://employee-management-api-beta.vercel.app/add',employee); //promise for add api
       toast.success('Employee added successfully');
       navigate('/display');
     }catch(err){
