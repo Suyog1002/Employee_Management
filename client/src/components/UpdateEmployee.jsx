@@ -26,7 +26,7 @@ const UpdateEmployee = () => {
   useEffect(() => {
     const loadDetails = async () => {
       try {
-        const response = await axios.get(`https://employee-management-backend-drab.vercel.app/${id}`);
+        const response = await axios.get(`https://employee-management-api-ten.vercel.app/${id}`);
         setEmployee(response.data);
         console.log(response.data);
       } catch (err) {
@@ -42,7 +42,7 @@ const UpdateEmployee = () => {
   //function for updating particular employee details
   const updateEmployee=async(employee,id)=>{
     try{
-      await axios.post(`https://employee-management-backend-drab.vercel.app/${id}`,employee);
+      await axios.post(`https://employee-management-api-ten.vercel.app/${id}`,employee);
       navigate('/display');
       toast.success('Employee Updated successfully');
     }catch(err){
