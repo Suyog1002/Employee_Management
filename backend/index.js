@@ -6,13 +6,7 @@ import router from './routes/route.js';
 
 const app=express(); //express server created
 const port=8000;
-app.use(cors(
-    {
-        origin: ["https://employee-management-app-eight.vercel.app"],
-        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-        credentials: true
-    }
-));
+app.use(cors());
 app.use(bodyParser.json({extended: true}));
 app.use(bodyParser.urlencoded({extended: true}));
 
