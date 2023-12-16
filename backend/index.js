@@ -8,7 +8,7 @@ const app=express(); //express server created
 const port=8000;
 app.use(cors(
     {
-        origin: ["https://employee-management-frontend-rust.vercel.app/"],
+        origin: ["https://employee-management-frontend-rust.vercel.app"],
         methods: ["POST","GET","DELETE"],
         credentials: true
     }
