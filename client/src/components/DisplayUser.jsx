@@ -21,7 +21,7 @@ const DisplayUser = () => {
   //function for requesting employees details
   const getEmployee = async () => {
     try {
-      let response = await axios.get('https://employee-management-backend-drab.vercel.app/display');
+      let response = await axios.get('https://employee-management-api-ten.vercel.app/display');
       setEmployee(response.data);
     } catch (err) {
       console.log("Error on employee display", err);
@@ -31,7 +31,7 @@ const DisplayUser = () => {
   //function for deleting particular employee details
   const deleteEmployee = async (id) => {
     try {
-      await axios.delete(`https://employee-management-backend-drab.vercel.app/${id}`);
+      await axios.delete(`https://employee-management-api-ten.vercel.app/${id}`);
       console.log("Employee deleted successfully");
       getEmployee();
       toast.success('Employee deleted successfully');
